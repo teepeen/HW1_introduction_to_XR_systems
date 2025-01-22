@@ -1,0 +1,34 @@
+{
+    "name": "LeftHandXButton",
+    "maps": [
+        {
+            "name": "New action map",
+            "id": "38bcf2c9-09a8-4e03-9d81-26a17f65b9f8",
+            "actions": [
+                {
+                    "name": "Press_X",
+                    "type": "Button",
+                    "id": "e4252b0e-b68c-474c-8971-58de1ec2e78a",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "191174d7-d18a-4378-9879-0c85a7fd6b78",
+                    "path": "<OculusTouchController>{LeftHand}/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Press_X",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
