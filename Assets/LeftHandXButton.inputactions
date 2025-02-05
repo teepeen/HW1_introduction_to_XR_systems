@@ -2,7 +2,7 @@
     "name": "LeftHandXButton",
     "maps": [
         {
-            "name": "New action map",
+            "name": "LeftHandButtons",
             "id": "38bcf2c9-09a8-4e03-9d81-26a17f65b9f8",
             "actions": [
                 {
@@ -12,6 +12,15 @@
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Press_Y",
+                    "type": "Button",
+                    "id": "18060aee-251e-422d-9187-6528d97cdf7e",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Press",
                     "initialStateCheck": false
                 }
             ],
@@ -24,6 +33,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "Press_X",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6203bc73-d324-4e4b-991f-a8e52a05abb3",
+                    "path": "<OculusTouchController>{LeftHand}/secondaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Press_Y",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "71c709cb-80df-42cf-aa55-dfeb3bfa3cb2",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Press_Y",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
