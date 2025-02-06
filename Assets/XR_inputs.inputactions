@@ -1,0 +1,54 @@
+{
+    "name": "XR_inputs",
+    "maps": [
+        {
+            "name": "XR controls",
+            "id": "00551cc6-ab67-4e37-8e87-fcb9e5e0dc47",
+            "actions": [
+                {
+                    "name": "Grab_right",
+                    "type": "Button",
+                    "id": "e2c776b0-070e-4b7f-a69c-dd358916b22b",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Grab_left",
+                    "type": "Button",
+                    "id": "051d5b64-d73b-4b2a-88ad-842958183de3",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "65089995-025b-4657-bba2-2d73262480d4",
+                    "path": "<OculusTouchController>{RightHand}/gripPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Grab_right",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8c213ced-1eb9-4cf1-951f-4c1666a9675a",
+                    "path": "<OculusTouchController>{LeftHand}/gripPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Grab_left",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
