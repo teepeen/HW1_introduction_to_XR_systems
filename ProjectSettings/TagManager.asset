@@ -6,11 +6,12 @@ TagManager:
   tags:
   - Grabbable
   - grabbable
+  - MagnifyingLayer
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - MagnifyingLayer
   - Water
   - UI
   - 

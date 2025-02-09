@@ -71,7 +71,7 @@ public class CustomGrab : MonoBehaviour
             if (grabbedObject)
             {
                 // Calculate the local position relative to the controller
-                Vector3 localPosition = grabbedObject.position - transform.position;
+                Vector3 localPosition = grabbedObject.transform.position - transform.position;
 
                 // Calculate the delta position (movement of the controller)
                 Vector3 deltaPosition = transform.position - previousPosition;
@@ -83,19 +83,21 @@ public class CustomGrab : MonoBehaviour
                 Vector3 rotatedLocalPosition = deltaRotation * localPosition;
 
                 // Update the position to be the new position relative to the controller
-                grabbedObject.position = transform.position + rotatedLocalPosition;
+                grabbedObject.transform.position += deltaPosition + rotatedLocalPosition - localPosition;
+                grabbedObject.transform.rotation = deltaRotation * grabbedObject.transform.rotation;
 
                 // If the other hand is also grabbing, calculate its delta position and delta rotation
                 if (otherHand.grabbedObject == grabbedObject)
                 {
-                    Vector3 localOtherHandPosition = grabbedObject.position - otherHand.transform.position;
+                    Vector3 localOtherHandPosition = grabbedObject.transform.position - otherHand.transform.position;
                     Vector3 deltaOtherHandPosition = otherHand.transform.position - otherHand.previousPosition;
                     Quaternion deltaOtherHandRotation = otherHand.transform.rotation * Quaternion.Inverse(otherHand.previousRotation);
 
                     Vector3 rotatedOtherhandLocalPosition = deltaOtherHandRotation * localOtherHandPosition;
                 
                     // Apply the combined delta to the grabbed object's position and rotation
-                    grabbedObject.position = transform.position + rotatedLocalPosition + rotatedOtherhandLocalPosition;
+                    grabbedObject.transform.position += deltaPosition + deltaOtherHandPosition + rotatedLocalPosition + rotatedOtherhandLocalPosition - localPosition - localOtherHandPosition;
+                    grabbedObject.transform.rotation = deltaRotation * deltaOtherHandRotation * grabbedObject.transform.rotation;
                 }
 
                 
